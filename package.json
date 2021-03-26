@@ -1,0 +1,42 @@
+{
+  "name": "metaservice",
+  "version": "1.0.0",
+  "description": "Core API structure for services",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogeshrandive/metaservice.git"
+  },
+  "keywords": [
+    "metaservice"
+  ],
+  "author": "Yogesh Randive",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yogeshrandive/metaservice/issues"
+  },
+  "homepage": "https://github.com/yogeshrandive/metaservice#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "skematic": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
