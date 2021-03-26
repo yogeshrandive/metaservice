@@ -6,10 +6,11 @@ const testConstructor = require('./../constructor/test')
 router.post('/', validator.first, function (req, res, next) {
   testConstructor.getAllUsers()
     .then(data => {
-      next(data)
+      res.locals.data = data
+      next()
     })
     .catch(err => {
-      console.log(err)
+      console.log("Error",err)
       next(err)
     })
 })

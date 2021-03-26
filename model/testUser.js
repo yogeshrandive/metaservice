@@ -1,12 +1,11 @@
-const MysqlBaseClass = require('./../sys/mysql')
+// const MysqlBaseClass = require('./../sys/mysql')
+const mysql = require('./../sys/mysql')
 
-class TestUserClass extends MysqlBaseClass {
-  constructor () {
-    super()
-  }
-
+class TestUserClass {
   async all () {
-    const data = await super.query('select * from actor;')
+    const data = await mysql.query('select * from cards limit 2;',[])
+    // .then(res=>res)
+// console.log(data)
     return data
   }
 }

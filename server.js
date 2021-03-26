@@ -26,13 +26,16 @@ app.get('/', (req, res) => {
   res.json({ message: 'DaMensch!' })
 })
 
+
+app.use((req,res,next) =>{
+  let {status,data} = res.locals
+  res.status(status || 200).json(data) 
+})
+
 app.use((err, req, res, next) => {
-  // console.log("Asdasdas",err)
-  // do something about the err
   if (err) {
     console.error(res.locals)
-
-    res.status(res.locals.status || 404).json({ status: 'error', message: err.message })
+    res.status(res.locals.status || 404).json({ status: 'error', message: err })
   } else { res.status(404).json({ status: 'error', message: 'Unable to find the requested resource' }) }
 })
 
