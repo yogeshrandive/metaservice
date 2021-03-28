@@ -26,10 +26,9 @@ app.get('/', (req, res) => {
   res.json({ message: 'DaMensch!' })
 })
 
-
-app.use((req,res,next) =>{
-  let {status,data} = res.locals
-  res.status(status || 200).json(data) 
+app.use((req, res, next) => {
+  const { status, data } = res.locals
+  res.status(status || 200).json(data)
 })
 
 app.use((err, req, res, next) => {

@@ -3,10 +3,11 @@ const mysql = require('./../sys/mysql')
 
 class TestUserClass {
   async all () {
-    const data = await mysql.query('select * from cards limit 2;',[])
-    // .then(res=>res)
-// console.log(data)
-    return data
+    return new Promise((resolve, reject) => {
+      mysql.query('SELECT 1 + 1 AS solution', [], (err, result) => {
+        if (err) { reject(err) } else resolve(result)
+      })
+    })
   }
 }
 
