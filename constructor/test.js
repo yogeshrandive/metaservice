@@ -3,10 +3,10 @@ const log = require('./../sys/log')
 
 class TestUserClass {
   async getAllUsers (data) {
-    return new Promise(async (resolve, reject) => {
-      const data = await userModel.all().then(res => res)
-      resolve({ status: 'success', message: 'user data', data: data })
-    })
+    const result = await userModel.all().then(res => res)
+    return new Promise((resolve, reject) => {
+      resolve({ status: 'success', message: 'user data', data: result })
+    }).catch(error => { throw new Error(error) })
   }
 }
 
